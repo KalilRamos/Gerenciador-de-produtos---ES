@@ -8,8 +8,15 @@ def adicionar_produto():
 while True:
     print('\n---- Menu ----')
     print('1. Cadastro de Produtos')
+    print('2. sair')
 
     acao = input('Escolha uma das opções do menu.')
 
     if acao == '1':
         adicionar_produto()
+    elif acao == '2':
+        print('Finalizando programa...')
+        break
+    else:
+        print('escolha uma das opções listadas')
+
