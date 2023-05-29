@@ -2,7 +2,7 @@ produtos = {}  # Dicionário para armazenar os produtos e seus valores
 
 def adicionar_produto():
     nome = input('Qual o nome do produto?')
-    valor = float(input('Ok! Mas qual é o valor do produto?'))
+    valor = float(input('Qual é o valor do produto?'))
     produtos[nome] = valor
 
 def listar_produtos():
@@ -30,4 +30,4 @@ while True:
         print('Saindo...')
         break
     else:
-        print('Por favor, escolha uma das opções dentre as listadas no menu.')
+        print('Por favor, escolha uma das opções do menu.')
