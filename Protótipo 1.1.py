@@ -14,11 +14,33 @@ def listar_produtos():
     else:
         print('Você ainda não cadastrou nenhum produto')
 
+def alterar_produto():
+    if produtos:
+        nome = input("Digite o nome do produto que deseja alterar: ")
+        if nome in produtos:
+            print(f"Produto: {nome}")
+            print(f"Valor atual: R${produtos[nome]:.2f}")
+
+            novo_nome = input("Digite o novo nome do produto: ")
+            novo_valor = input("Digite o novo valor do produto: ")
+
+            if novo_nome != "":
+                produtos[nome] = str(novo_nome)
+            if novo_valor != "":
+                produtos[nome] = float(novo_valor)
+
+            print("Produto alterado com sucesso!")
+        else:
+            print("Produto não encontrado.")
+    else:
+        print("Nenhum produto cadastrado.")
+
 while True:
     print('\n---- Menu ----')
     print('1. Cadastro de Produtos')
     print('2. Tabela de Produtos')
-    print('3. sair')
+    print('3. Alterar um produto')
+    print('4. sair')
 
     acao = input('Escolha uma das opções do menu.')
 
@@ -27,6 +49,8 @@ while True:
     elif acao == '2':
         listar_produtos()
     elif acao == '3':
+        alterar_produto()
+    elif acao == '4':
         print('Saindo...')
         break
     else:
