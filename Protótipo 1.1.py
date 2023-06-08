@@ -1,4 +1,4 @@
-produtos = {}  # Dicionário para armazenar os produtos e seus valores
+produtos = {}
 
 def adicionar_produto():
     nome = input('Qual o nome do produto?')
@@ -54,4 +54,4 @@ while True:
         print('Saindo...')
         break
     else:
-        print('Por favor, escolha uma das opções do menu.')
+        print('Opção inválida, escolha uma das opções do menu.')
