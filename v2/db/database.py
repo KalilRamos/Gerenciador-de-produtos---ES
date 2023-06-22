@@ -1,7 +1,7 @@
 from sqlalchemy import URL, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-#Alterar para a suas credenciais do banco de dados
+# Alterar para a suas credenciais do banco de dados
 DB_URL = URL.create(
     "mysql", 
     username="root",
@@ -10,6 +10,7 @@ DB_URL = URL.create(
     database="project_eng_software",
 )
 
+# Configuracao da ferramenta
 engine = create_engine(DB_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

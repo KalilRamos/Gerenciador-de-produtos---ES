@@ -11,6 +11,7 @@ app = FastAPI()
 
 
 # Dependency
+# Funcao que retornar a sessao do BD
 def get_db():
     db = SessionLocal()
     try:
@@ -21,6 +22,7 @@ def get_db():
 
 # CREATE
 @app.post("/produtos/{nome}/{valor}")
+# Os valores da rota acima sao passados diretamente para a funcao abaixo
 async def createProduct(nome: str, valor: float, db: Session = Depends(get_db)):
     return await criarProduto(db, nome, valor)
 
